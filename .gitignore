@@ -4,6 +4,7 @@ _ReSharper*
 _NCrunch*
 obj/
 bin/
+csx/
 .vs/
 *.user
 *.suo

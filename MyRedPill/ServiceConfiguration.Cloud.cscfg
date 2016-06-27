@@ -3,7 +3,8 @@
   <Role name="MyRedPillWebRole">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=myredpillstorageaccount1;AccountKey=KmVdf4DqKrzbh6Lr8Se58Ea7DZiB7sL03of9kfpvSw/1oHbqKrWGBC5PXQWkot3gRDTlCpplAStkOQ9rGfKonQ==" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="40d912cc-1a52-4d4f-9028-a889d5fcfb10" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
