@@ -1,0 +1,25 @@
+# git ignore file
+.gitignore
+_ReSharper*
+_NCrunch*
+obj/
+bin/
+.vs/
+*.user
+*.suo
+*.ncrunchproject
+*.ncrunchsolution
+*.cache
+*.tmp
+[Tt]est[Rr]esult*
+node_modules
+_git/
+
+# Ignore NuGet Packages (http://docs.nuget.org/consume/package-restore)
+*.nupkg
+# Ignore the packages folder
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+.idea/
+*.iml
