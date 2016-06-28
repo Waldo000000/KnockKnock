@@ -21,4 +21,10 @@ namespace MyRedPillTests
     {
         protected override IRedPill RedPill => new RedPillClient("BasicHttpBinding_IRedPill_Readify");
     }
+
+    [TestClass]
+    public class MyLocalRedPillTests : RedPillTests
+    {
+        protected override IRedPill RedPill => new MyRedPill();
+    }
 }
