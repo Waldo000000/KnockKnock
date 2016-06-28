@@ -1,6 +1,4 @@
-﻿using System;
-using EasyAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyRedPillWebRole;
 using RedPillContract.RedPill;
 
