@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRedPillWebRole", "MyRedPi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRedPillTests", "MyRedPillTests\MyRedPillTests.csproj", "{869858C4-4B55-429E-B1D0-32A8371191E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedPillContract", "RedPillContract\RedPillContract.csproj", "{F5469378-8970-48A2-B3DB-29BD77B9FE90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{869858C4-4B55-429E-B1D0-32A8371191E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{869858C4-4B55-429E-B1D0-32A8371191E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{869858C4-4B55-429E-B1D0-32A8371191E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5469378-8970-48A2-B3DB-29BD77B9FE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5469378-8970-48A2-B3DB-29BD77B9FE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5469378-8970-48A2-B3DB-29BD77B9FE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5469378-8970-48A2-B3DB-29BD77B9FE90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

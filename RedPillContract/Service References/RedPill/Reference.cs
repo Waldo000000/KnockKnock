@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyRedPillWebRole.RedPill {
+namespace RedPillContract.RedPill {
     using System.Runtime.Serialization;
     
     
@@ -48,10 +48,10 @@ namespace MyRedPillWebRole.RedPill {
         System.Threading.Tasks.Task<long> FibonacciNumberAsync(long n);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://KnockKnock.readify.net/IRedPill/WhatShapeIsThis", ReplyAction="http://KnockKnock.readify.net/IRedPill/WhatShapeIsThisResponse")]
-        MyRedPillWebRole.RedPill.TriangleType WhatShapeIsThis(int a, int b, int c);
+        RedPillContract.RedPill.TriangleType WhatShapeIsThis(int a, int b, int c);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://KnockKnock.readify.net/IRedPill/WhatShapeIsThis", ReplyAction="http://KnockKnock.readify.net/IRedPill/WhatShapeIsThisResponse")]
-        System.Threading.Tasks.Task<MyRedPillWebRole.RedPill.TriangleType> WhatShapeIsThisAsync(int a, int b, int c);
+        System.Threading.Tasks.Task<RedPillContract.RedPill.TriangleType> WhatShapeIsThisAsync(int a, int b, int c);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://KnockKnock.readify.net/IRedPill/ReverseWords", ReplyAction="http://KnockKnock.readify.net/IRedPill/ReverseWordsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentNullException), Action="http://KnockKnock.readify.net/IRedPill/ReverseWordsArgumentNullExceptionFault", Name="ArgumentNullException", Namespace="http://schemas.datacontract.org/2004/07/System")]
@@ -62,12 +62,12 @@ namespace MyRedPillWebRole.RedPill {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IRedPillChannel : MyRedPillWebRole.RedPill.IRedPill, System.ServiceModel.IClientChannel {
+    public interface IRedPillChannel : RedPillContract.RedPill.IRedPill, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class RedPillClient : System.ServiceModel.ClientBase<MyRedPillWebRole.RedPill.IRedPill>, MyRedPillWebRole.RedPill.IRedPill {
+    public partial class RedPillClient : System.ServiceModel.ClientBase<RedPillContract.RedPill.IRedPill>, RedPillContract.RedPill.IRedPill {
         
         public RedPillClient() {
         }
@@ -104,11 +104,11 @@ namespace MyRedPillWebRole.RedPill {
             return base.Channel.FibonacciNumberAsync(n);
         }
         
-        public MyRedPillWebRole.RedPill.TriangleType WhatShapeIsThis(int a, int b, int c) {
+        public RedPillContract.RedPill.TriangleType WhatShapeIsThis(int a, int b, int c) {
             return base.Channel.WhatShapeIsThis(a, b, c);
         }
         
-        public System.Threading.Tasks.Task<MyRedPillWebRole.RedPill.TriangleType> WhatShapeIsThisAsync(int a, int b, int c) {
+        public System.Threading.Tasks.Task<RedPillContract.RedPill.TriangleType> WhatShapeIsThisAsync(int a, int b, int c) {
             return base.Channel.WhatShapeIsThisAsync(a, b, c);
         }
         

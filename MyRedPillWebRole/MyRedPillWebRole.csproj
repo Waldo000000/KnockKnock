@@ -95,23 +95,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\RedPill\configuration91.svcinfo" />
-    <None Include="Service References\RedPill\configuration.svcinfo" />
-    <Content Include="Service References\RedPill\MyRedPillWebRole.RedPill.TriangleType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\RedPill\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="MyRedPill.svc" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service References\RedPill\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="MyRedPill.svc.cs">
       <DependentUpon>MyRedPill.svc</DependentUpon>
     </Compile>
@@ -126,17 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
-    <None Include="Service References\RedPill\RedPill.wsdl" />
-    <None Include="Service References\RedPill\RedPill.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\RedPill\RedPill1.wsdl" />
-    <None Include="Service References\RedPill\RedPill1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\RedPill\RedPill2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -145,10 +120,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\RedPill\" />
+    <ProjectReference Include="..\RedPillContract\RedPillContract.csproj">
+      <Project>{f5469378-8970-48a2-b3db-29bd77b9fe90}</Project>
+      <Name>RedPillContract</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
