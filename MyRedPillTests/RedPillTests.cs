@@ -1,6 +1,7 @@
 ﻿using System;
 using EasyAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MyRedPillWebRole;
 using RedPillContract.RedPill;
 
 namespace MyRedPillTests
@@ -20,6 +21,12 @@ namespace MyRedPillTests
     public class ReadifyRedPillTests : RedPillTests
     {
         protected override IRedPill RedPill => new RedPillClient("BasicHttpBinding_IRedPill_Readify");
+    }
+
+    [TestClass]
+    public class MyProdRedPillTests : RedPillTests
+    {
+        protected override IRedPill RedPill => new RedPillClient("BasicHttpBinding_IRedPill");
     }
 
     [TestClass]
