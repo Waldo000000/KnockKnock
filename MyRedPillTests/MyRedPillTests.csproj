@@ -72,6 +72,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyRedPillWebRole\MyRedPillWebRole.csproj">
+      <Project>{D1E455C2-121C-4C43-8B70-4BF5CFD0A5A8}</Project>
+      <Name>MyRedPillWebRole</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RedPillContract\RedPillContract.csproj">
       <Project>{f5469378-8970-48a2-b3db-29bd77b9fe90}</Project>
       <Name>RedPillContract</Name>
