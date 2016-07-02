@@ -7,7 +7,7 @@ Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "MyRedPill", "MyRedPill\MyRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRedPillWebRole", "MyRedPillWebRole\MyRedPillWebRole.csproj", "{D1E455C2-121C-4C43-8B70-4BF5CFD0A5A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRedPillTests", "MyRedPillTests\MyRedPillTests.csproj", "{869858C4-4B55-429E-B1D0-32A8371191E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedPillTests", "MyRedPillTests\RedPillTests.csproj", "{869858C4-4B55-429E-B1D0-32A8371191E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedPillContract", "RedPillContract\RedPillContract.csproj", "{F5469378-8970-48A2-B3DB-29BD77B9FE90}"
 EndProject
