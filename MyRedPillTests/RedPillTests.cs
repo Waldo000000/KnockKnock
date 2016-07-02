@@ -1,4 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using EasyAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyRedPillWebRole;
 using RedPillContract.RedPill;
 
@@ -9,9 +13,29 @@ namespace MyRedPillTests
         protected abstract IRedPill RedPill { get; }
 
         [TestMethod]
-        public void FibonacciNumber_3_2()
+        public void FibonacciNumber_LessThanOne_Throws()
         {
-            Assert.AreEqual(2, RedPill.FibonacciNumber(3));
+            Enumerable.Range(-10, 0)
+                .AllItemsSatisfy(n => Should.Throw<ArgumentOutOfRangeException>(() => RedPill.FibonacciNumber(n)));
+        }
+
+        [TestMethod]
+        public void FibonacciNumber_SmallIntegers_ReturnsCorrespondingFibonacciNumber()
+        {
+            IEnumerable<FibonacciResult> expected = new List<long> { 1, 1, 2, 3, 5, 8, 13, 21, 34 }.Select((e, n) => new FibonacciResult(n + 1, e));
+            expected.AllItemsSatisfy(e => RedPill.FibonacciNumber(e.Number).ShouldBe(e.FibonacciNumber, $"Failed for n={e.Number}"));
+        }
+
+        public class FibonacciResult
+        {
+            public int Number { get; }
+            public long FibonacciNumber { get; }
+
+            public FibonacciResult(int number, long fibonacciNumber)
+            {
+                Number = number;
+                FibonacciNumber = fibonacciNumber;
+            }
         }
     }
 
@@ -22,14 +46,14 @@ namespace MyRedPillTests
     }
 
     [TestClass]
-    public class MyProdRedPillTests : RedPillTests
-    {
-        protected override IRedPill RedPill => new RedPillClient("BasicHttpBinding_IRedPill");
-    }
-
-    [TestClass]
     public class MyLocalRedPillTests : RedPillTests
     {
         protected override IRedPill RedPill => new MyRedPill();
+    }
+
+    [TestClass, Ignore]
+    public class MyProdRedPillTests : RedPillTests
+    {
+        protected override IRedPill RedPill => new RedPillClient("BasicHttpBinding_IRedPill");
     }
 }

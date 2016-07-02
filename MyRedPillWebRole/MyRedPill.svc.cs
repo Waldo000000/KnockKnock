@@ -14,8 +14,8 @@ namespace MyRedPillWebRole
 
         public long FibonacciNumber(long n)
         {
-            if (n < 1)
-                throw new ArgumentOutOfRangeException(nameof(n), "Cannot calculate Fibonnaci number for integers less than 1");
+            if (n < 1) throw new ArgumentOutOfRangeException(nameof(n), "Cannot calculate Fibonnaci number for integers less than 1");
+
             return n <= 2 ? 1 
                 : FibonacciNumber(n - 1) + FibonacciNumber(n - 2);
         }
